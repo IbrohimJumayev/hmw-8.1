@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.aside,
+.home,
+.today {
+  height: 90vh;
+  border-radius: 60px;
+  background-color: rgba(113, 110, 110, 0.134);
+}
+.today {
+  height: 80vh;
+  background-color: transparent;
+  border: 1px solid gray;
+  flex: 1;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 300;
+  gap: 5px;
+}
+
+.active {
+  color: rgb(22, 215, 22);
+}

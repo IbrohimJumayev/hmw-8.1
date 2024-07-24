@@ -6,7 +6,11 @@ const Navbar = () => {
   const isLoginPage = location.pathname === "/login";
 
   return (
-    <aside className={`flex-col w-96 aside rounded-  mx-10 my-10 px-10 py-10 ${isLoginPage ? "hidden" : ""} `}>
+    <aside
+      className={`flex-col w-96 aside rounded-  mx-10 my-10 px-10 py-10 ${
+        isLoginPage ? "hidden" : ""
+      } `}
+    >
       <div>
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-bold">Menu</h1>
@@ -43,8 +47,8 @@ const Navbar = () => {
             </NavLink>
 
             <li className="flex items-center gap-2 cursor-pointer hover:scale-105 pt-5 duration-300">
-              <span class="material-symbols-outlined">calendar_month</span>
-              Calendar
+              <span class="material-symbols-outlined">event_upcoming</span>
+              Upcoming
             </li>
             <li className="flex items-center gap-2 cursor-pointer hover:scale-105 pt-5 duration-300">
               <span class="material-symbols-outlined">sticky_note_2</span>Sticky

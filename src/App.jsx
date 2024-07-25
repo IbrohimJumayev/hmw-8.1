@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import TodayPage from "./pages/TodayPage";
 import LoginPage from "./pages/LoginPage";
 import ProtectedRoute from "./components/protectedRoutes/ProtectedRoute";
+import Upcoming from "./pages/Upcoming";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/today" element={<TodayPage />} />
+            <Route path="/upcoming" element={<Upcoming />} />
           </Route>
 
           <Route path="/login" element={<LoginPage />} />

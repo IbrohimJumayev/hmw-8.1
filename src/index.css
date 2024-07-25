@@ -16,6 +16,22 @@
   flex: 1;
 }
 
+.today1 {
+  height: 40vh;
+  width: 68vw;
+  border: 1px solid gray;
+  flex: 1;
+  background-color: transparent;
+  border-radius: 60px;
+}
+
+.today2,
+.today3 {
+  border: 1px solid gray;
+  border-radius: 60px;
+  height: 35vh;
+}
+
 .bottom {
   display: flex;
   flex-direction: column;

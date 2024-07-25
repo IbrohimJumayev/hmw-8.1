@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const TodayPage = () => {
   const [todos, setTodos] = useState([]);
-  console.log(todos);
   const [newTask, setNewTask] = useState("");
 
   const addTask = (e) => {

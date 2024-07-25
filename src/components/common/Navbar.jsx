@@ -45,11 +45,13 @@ const Navbar = () => {
                 <span class="material-symbols-outlined">today</span>Today
               </li>
             </NavLink>
+            <NavLink to="/upcoming">
+              <li className="flex items-center gap-2 cursor-pointer hover:scale-105 pt-5 duration-300">
+                <span class="material-symbols-outlined">event_upcoming</span>
+                Upcoming
+              </li>
+            </NavLink>
 
-            <li className="flex items-center gap-2 cursor-pointer hover:scale-105 pt-5 duration-300">
-              <span class="material-symbols-outlined">event_upcoming</span>
-              Upcoming
-            </li>
             <li className="flex items-center gap-2 cursor-pointer hover:scale-105 pt-5 duration-300">
               <span class="material-symbols-outlined">sticky_note_2</span>Sticky
               Wall

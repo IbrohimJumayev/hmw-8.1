@@ -1,28 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  tomorrow: [],
-  thisWeek: [],
-};
-
 const TodosSlice = createSlice({
   name: "todos",
-  initialState,
+  initialState: [
+    { id: 1, title: "todo1", checked: false },
+    { id: 2, title: "todo2", checked: false },
+    { id: 3, title: "todo3", checked: true },
+  ],
   reducers: {
-    addTodo: (state, { payload }) => {
-      const TODO = {
+    addTodo: (state, action) => {
+      const newTodo = {
         id: Date.now(),
-        title: payload,
-        completed: false,
+        title: action.payload.title,
+        checked: false,
       };
-      state.push(TODO);
+      state.push(newTodo);
     },
-    deleteTodo: (state, { payload }) => {
-        const updatedTodos = state.filter((todo) => todo.id !== payload)
-        state.push(updatedTodos)
-    }
+    deleteTodo: (state, action) => {
+      return state.filter((todo) => todo.id !== action.payload);
+    },
   },
 });
 
-export const {addTodo, deleteTodo} = TodosSlice.actions
-export default TodosSlice.reducer
+export const { addTodo, deleteTodo } = TodosSlice.actions;
+export default TodosSlice.reducer;

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { userContext } from "../context/UserContext";
 
 const Logout = () => {
-  const { setUser } = useContext(userContext);
+  const { setUser, user } = useContext(userContext);
   const navigate = useNavigate();
 
   function logOut() {
@@ -13,12 +13,14 @@ const Logout = () => {
   }
   return (
     <div>
-      <button
-        onClick={logOut}
-        className="flex items-center gap-5 hover:scale-105 duration-300"
-      >
-        <span class="material-symbols-outlined">logout</span>Sign Out
-      </button>
+      {user && (
+        <button
+          onClick={logOut}
+          className="flex items-center gap-5 hover:scale-105 duration-300"
+        >
+          <span class="material-symbols-outlined">logout</span>Sign Out
+        </button>
+      )}
     </div>
   );
 };
